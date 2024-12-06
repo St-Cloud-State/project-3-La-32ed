@@ -5,6 +5,8 @@ public abstract class Item implements Serializable {
   //public static void setUIContext(UIContext uiContext) {
   //  Item.uiContext = uiContext;
   //}
+
+  public abstract void translate(int dx, int dy); // Abstract to be implemented in subclasses
   public abstract boolean includes(Point point);
   protected double distance(Point point1, Point point2) {
     double xDifference = point1.getX() - point2.getX();

@@ -62,6 +62,17 @@ public class Model {
   public Enumeration getSelectedItems() {
     return selectedList.elements();
   }
+
+    // New method to move selected items
+    public void moveSelectedItems(int dx, int dy) {
+        Enumeration<Item> selectedItems = getSelectedItems();
+        while (selectedItems.hasMoreElements()) {
+            Item item = selectedItems.nextElement();
+            item.translate(dx, dy); // Calls the new `translate` method in `Item`
+        }
+        setChanged(); // Notify the view to refresh with updated positions
+    }
+      
   // other fields, methods and classes
   public void save(String fileName) {
     try {

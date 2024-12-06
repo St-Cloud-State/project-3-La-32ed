@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+
 public class LineButton  extends JButton implements ActionListener {
   protected JPanel drawingPanel;
   protected View view;

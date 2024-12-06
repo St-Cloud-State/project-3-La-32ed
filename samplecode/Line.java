@@ -2,6 +2,13 @@ import java.awt.*;
 public class Line extends Item {
   private Point point1;
   private Point point2;
+
+  @Override
+  public void translate(int dx, int dy) {
+      point1.translate(dx, dy);
+      point2.translate(dx, dy);
+  }
+  
   public Line(Point point1, Point point2) {
     this.point1 = point1;
     this.point2 = point2;

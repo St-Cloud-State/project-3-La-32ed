@@ -1,6 +1,8 @@
 import java.awt.*;
 public class Label extends Item {
+
   private Point startingPoint;
+
   private String text = "";
   public Label(Point point) {
     startingPoint = point;
@@ -25,4 +27,11 @@ public class Label extends Item {
   public Point getStartingPoint() {
     return startingPoint;
   }
+
+  public void translate(int dx, int dy) {
+    startingPoint.translate(dx, dy);
+}
+
+
+
 }
